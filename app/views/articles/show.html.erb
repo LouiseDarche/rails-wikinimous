@@ -1,0 +1,9 @@
+<div class="container" style="margin-top: 70px;">
+  <h1 style="font-family: 'Roboto Slab', serif;"><%= @article.title %>
+  </h1>
+  <%= link_to "Edit", edit_article_path(@article) %>
+  <%= link_to "Delete", article_path(@article), method: :delete, data: {confirm: "Are you sure?"} %>
+  <p><%= @article.content %></p>
+  <%= link_to "Back home", articles_path %>
+
+</div>

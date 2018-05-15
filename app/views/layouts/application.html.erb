@@ -5,11 +5,22 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <style>
+    @import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700|Roboto+Slab:300,400,700');
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <nav class="navbar fixed-top navbar-light bg-faded">
+    <div class="links" style="display: flex;
+      justify-content: space-between;">
+      <%= link_to "Wikinomous", articles_path, class: "navbar-brand" %>
+      <%= link_to "Create a new article", new_article_path, class: "navbar-brand" %>
+    </div>
+    </nav>
     <%= yield %>
   </body>
 </html>
